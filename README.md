@@ -13,14 +13,13 @@ The system provides separate interfaces for normal users and administrators, wit
 **Domain:** Database Management Systems (DBMS)
 
 **Team ID:** TEAM ID 23
-
 ### Team Members
 
 | Student ID | Name |
 |---|---|
+| 1272260890 | Vedika Kapoor |
 | 1262253623 | Aryan Choudhari |
 | 1262251094 | Riti Kumar |
-| 1272260890 | Vedika Kapoor |
 | 1262252998 | Shivani Salunkhe |
 
 ---
