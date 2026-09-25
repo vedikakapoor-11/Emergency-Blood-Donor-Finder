@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BloodLink - Create Account</title>
+
+    <link rel="stylesheet" href="../css/user.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(
+                135deg,
+                #f8f9fa,
+                #ffe5e5
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px 15px;
+        }
+
+
+        /* =========================================
+           MAIN CONTAINER
+        ========================================= */
+
+        .register-container {
+            width: 100%;
+            max-width: 480px;
+        }
+
+
+        /* =========================================
+           REGISTER CARD
+        ========================================= */
+
+        .register-card {
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================================
+           BRAND
+        ========================================= */
+
+        .brand {
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+
+        .brand-icon {
+            width: 60px;
+            height: 60px;
+
+            margin: 0 auto 12px;
+
+            border-radius: 50%;
+
+            background: #dc3545;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 30px;
+        }
+
+
+        .brand h1 {
+            margin: 0;
+
+            color: #dc3545;
+
+            font-size: 28px;
+        }
+
+
+        .brand p {
+            margin: 7px 0 0;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FORM TITLE
+        ========================================= */
+
+        .form-title {
+            margin-bottom: 22px;
+        }
+
+
+        .form-title h2 {
+            margin: 0;
+
+            color: #333;
+
+            font-size: 23px;
+        }
+
+
+        .form-title p {
+            margin: 6px 0 0;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FORM GROUP
+        ========================================= */
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #333;
+        }
+
+
+        .form-group input {
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 1px solid #d5d5d5;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition: 0.2s;
+        }
+
+
+        .form-group input:focus {
+            border-color: #dc3545;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(220, 53, 69, 0.1);
+        }
+
+
+        /* =========================================
+           PASSWORD NOTE
+        ========================================= */
+
+        .password-note {
+            margin-top: 5px;
+
+            font-size: 12px;
+
+            color: #888;
+        }
+
+
+        /* =========================================
+           REGISTER BUTTON
+        ========================================= */
+
+        .register-btn {
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #dc3545;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+            margin-top: 5px;
+        }
+
+
+        .register-btn:hover {
+            background: #c82333;
+        }
+
+
+        .register-btn:disabled {
+            background: #999;
+
+            cursor: not-allowed;
+        }
+
+
+        /* =========================================
+           MESSAGE
+        ========================================= */
+
+        .message {
+            display: none;
+
+            padding: 11px 13px;
+
+            border-radius: 8px;
+
+            margin-bottom: 17px;
+
+            font-size: 14px;
+        }
+
+
+        .message.error {
+            display: block;
+
+            background: #fde8e8;
+
+            color: #b42318;
+
+            border: 1px solid #f5c2c7;
+        }
+
+
+        .message.success {
+            display: block;
+
+            background: #e8f7ee;
+
+            color: #146c43;
+
+            border: 1px solid #badbcc;
+        }
+
+
+        /* =========================================
+           LOGIN LINK
+        ========================================= */
+
+        .login-link {
+            text-align: center;
+
+            margin-top: 22px;
+
+            font-size: 14px;
+
+            color: #666;
+        }
+
+
+        .login-link a {
+            color: #dc3545;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================
+           BACK LINK
+        ========================================= */
+
+        .back-link {
+            text-align: center;
+
+            margin-top: 15px;
+        }
+
+
+        .back-link a {
+            color: #666;
+
+            text-decoration: none;
+
+            font-size: 13px;
+        }
+
+
+        .back-link a:hover {
+            color: #dc3545;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 500px) {
+
+            .register-card {
+                padding: 25px 20px;
+            }
+
+            .brand h1 {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="register-container">
+
+
+        <div class="register-card">
+
+
+            <!-- =====================================
+                 BRAND
+            ====================================== -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🩸
+                </div>
+
+                <h1>
+                    BloodLink
+                </h1>
+
+                <p>
+                    Emergency Blood Donor Finder System
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 FORM TITLE
+            ====================================== -->
+
+            <div class="form-title">
+
+                <h2>
+                    Create Your Account
+                </h2>
+
+                <p>
+                    Register to find donors and manage blood requests.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 MESSAGE
+            ====================================== -->
+
+            <div
+                id="message"
+                class="message">
+            </div>
+
+
+            <!-- =====================================
+                 REGISTRATION FORM
+            ====================================== -->
+
+            <form id="registerForm">
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                        minlength="2"
+                        maxlength="100"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                        maxlength="100"
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        maxlength="15"
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                        minlength="6"
+                        maxlength="100"
+                    >
+
+                    <div class="password-note">
+                        Password must contain at least 6 characters.
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Re-enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- REGISTER BUTTON -->
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                    id="registerBtn"
+                >
+                    Create Account
+                </button>
+
+
+            </form>
+
+
+            <!-- =====================================
+                 LOGIN LINK
+            ====================================== -->
+
+            <div class="login-link">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login here
+                </a>
+
+            </div>
+
+
+            <!-- =====================================
+                 BACK LINK
+            ====================================== -->
+
+            <div class="back-link">
+
+                <a href="user-dashboard.html">
+                    ← Back to User Dashboard
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         REGISTRATION JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        const registerForm =
+            document.getElementById("registerForm");
+
+        const message =
+            document.getElementById("message");
+
+        const registerBtn =
+            document.getElementById("registerBtn");
+
+
+        registerForm.addEventListener(
+            "submit",
+            async function(event) {
+
+                event.preventDefault();
+
+
+                /* =================================
+                   GET FORM VALUES
+                ================================= */
+
+                const name =
+                    document
+                        .getElementById("name")
+                        .value
+                        .trim();
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+                const phone =
+                    document
+                        .getElementById("phone")
+                        .value
+                        .trim();
+
+                const password =
+                    document
+                        .getElementById("password")
+                        .value;
+
+                const confirmPassword =
+                    document
+                        .getElementById("confirmPassword")
+                        .value;
+
+
+                /* =================================
+                   CLEAR OLD MESSAGE
+                ================================= */
+
+                message.className = "message";
+
+                message.textContent = "";
+
+
+                /* =================================
+                   NAME VALIDATION
+                ================================= */
+
+                if (name.length < 2) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Please enter a valid name.";
+
+                    return;
+                }
+
+
+                /* =================================
+                   EMAIL VALIDATION
+                ================================= */
+
+                if (!email.includes("@")) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Please enter a valid email address.";
+
+                    return;
+                }
+
+
+                /* =================================
+                   PHONE VALIDATION
+                ================================= */
+
+                if (
+                    phone.length > 0 &&
+                    !/^[0-9+\-\s()]+$/.test(phone)
+                ) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Please enter a valid phone number.";
+
+                    return;
+                }
+
+
+                /* =================================
+                   PASSWORD VALIDATION
+                ================================= */
+
+                if (password.length < 6) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Password must contain at least 6 characters.";
+
+                    return;
+                }
+
+
+                /* =================================
+                   CONFIRM PASSWORD
+                ================================= */
+
+                if (password !== confirmPassword) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Passwords do not match.";
+
+                    return;
+                }
+
+
+                /* =================================
+                   DISABLE BUTTON
+                ================================= */
+
+                registerBtn.disabled = true;
+
+                registerBtn.textContent =
+                    "Creating Account...";
+
+
+                try {
+
+
+                    /* =============================
+                       SEND DATA TO FLASK
+                    ============================== */
+
+                    const response =
+                        await fetch(
+                            "http://127.0.0.1:5000/api/register",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body:
+                                    JSON.stringify({
+
+                                        Name: name,
+
+                                        Email: email,
+
+                                        Phone: phone,
+
+                                        Password: password
+
+                                    })
+                            }
+                        );
+
+
+                    /* =============================
+                       READ RESPONSE
+                    ============================== */
+
+                    const data =
+                        await response.json();
+
+
+                    /* =============================
+                       SUCCESS
+                    ============================== */
+
+                    if (response.ok) {
+
+                        message.className =
+                            "message success";
+
+                        message.textContent =
+                            "Account created successfully! You can now login.";
+
+
+                        registerForm.reset();
+
+
+                        registerBtn.textContent =
+                            "Account Created";
+
+
+                        /*
+                         * Login page will be created
+                         * in the next step.
+                         */
+
+                        setTimeout(
+                            function() {
+
+                                window.location.href =
+                                    "login.html";
+
+                            },
+                            2000
+                        );
+
+                    }
+
+
+                    /* =============================
+                       BACKEND ERROR
+                    ============================== */
+
+                    else {
+
+                        message.className =
+                            "message error";
+
+                        message.textContent =
+                            data.message ||
+                            "Registration failed.";
+
+
+                        registerBtn.disabled =
+                            false;
+
+                        registerBtn.textContent =
+                            "Create Account";
+                    }
+
+
+                }
+
+                catch (error) {
+
+                    console.error(
+                        "Registration error:",
+                        error
+                    );
+
+
+                    message.className =
+                        "message error";
+
+
+                    message.textContent =
+                        "Unable to connect to the server. Make sure Flask is running.";
+
+
+                    registerBtn.disabled =
+                        false;
+
+
+                    registerBtn.textContent =
+                        "Create Account";
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

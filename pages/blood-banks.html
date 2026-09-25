@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Blood Banks | BloodLink</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Page CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/blood-banks.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div>
+                <h2>BloodLink</h2>
+                <span>Emergency Blood System</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+
+            <a
+                href="../dashboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="find-donor.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Find Donor</span>
+            </a>
+
+
+            <a
+                href="donors.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-users"></i>
+                <span>Donors</span>
+            </a>
+
+
+            <a
+                href="blood-request.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-hand-holding-droplet"></i>
+                <span>Blood Requests</span>
+            </a>
+
+
+            <a
+                href="donations.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-heart-circle-plus"></i>
+                <span>Donations</span>
+            </a>
+
+
+            <a
+                href="inventory.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Blood Inventory</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                MANAGEMENT
+            </div>
+
+
+            <a
+                href="responses.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-reply-all"></i>
+                <span>Donor Responses</span>
+            </a>
+
+
+            <a
+                href="hospitals.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-hospital"></i>
+                <span>Hospitals</span>
+            </a>
+
+
+            <a
+                href="blood-banks.html"
+                class="nav-item active"
+            >
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Blood Banks</span>
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>Frontend Active</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Dashboard / Blood Banks
+                    </span>
+
+                    <h1>Blood Banks</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <button
+                    class="notification-btn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>Administrator</strong>
+
+                        <span>System Admin</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE INTRO -->
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="page-label">
+                        <i class="fa-solid fa-building-columns"></i>
+                        BLOOD BANK MANAGEMENT
+                    </span>
+
+                    <h2>Blood Banks</h2>
+
+                    <p>
+                        Manage blood banks connected to the emergency blood system.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="addBloodBankButton"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Blood Bank
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Total Blood Banks</span>
+
+                        <strong id="totalBloodBanks">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Locations</span>
+
+                        <strong id="locationCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Contact Available</span>
+
+                        <strong id="contactCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Inventory Connected</span>
+
+                        <strong id="inventoryConnected">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTERS
+                 ================================================= -->
+
+            <div class="filter-card">
+
+                <div class="filter-header">
+
+                    <h3>
+                        <i class="fa-solid fa-filter"></i>
+                        Search Blood Banks
+                    </h3>
+
+                    <p>
+                        Search blood banks by name, location or contact number.
+                    </p>
+
+                </div>
+
+
+                <div class="filter-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="bloodBankSearch">
+                            Search
+                        </label>
+
+                        <div class="input-with-icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="bloodBankSearch"
+                                placeholder="Search blood bank..."
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="bloodBankLocation">
+                            Location
+                        </label>
+
+                        <select id="bloodBankLocation">
+
+                            <option value="">
+                                All Locations
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-actions">
+
+                        <button
+                            class="secondary-btn"
+                            id="resetFilters"
+                        >
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BLOOD BANK TABLE
+                 ================================================= -->
+
+            <div class="table-card">
+
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>
+                            Blood Bank Directory
+                        </h3>
+
+                        <p id="resultSummary">
+                            Showing blood bank records
+                        </p>
+
+                    </div>
+
+
+                    <div class="table-tools">
+
+                        <button
+                            class="outline-btn"
+                            id="refreshBloodBanks"
+                        >
+
+                            <i class="fa-solid fa-arrows-rotate"></i>
+
+                            Refresh
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Blood Bank ID
+                                </th>
+
+                                <th>
+                                    Blood Bank Name
+                                </th>
+
+                                <th>
+                                    Location
+                                </th>
+
+                                <th>
+                                    Contact
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="bloodBankTableBody">
+
+                            <!-- JavaScript will insert rows -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         BLOOD BANK DETAILS MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="bloodBankModal"
+    >
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        BLOOD BANK DETAILS
+                    </span>
+
+                    <h3 id="modalBloodBankTitle">
+                        Blood Bank Details
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="closeBloodBankModal"
+                    aria-label="Close"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="modal-body"
+                id="modalBloodBankBody"
+            >
+
+                <!-- JavaScript inserts details -->
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="secondary-btn"
+                    id="closeBloodBankButton"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ADD BLOOD BANK MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="addBloodBankModal"
+    >
+
+        <div class="modal-content add-blood-bank-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        BLOOD BANK MANAGEMENT
+                    </span>
+
+                    <h3>
+                        Add Blood Bank
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="closeAddBloodBankModal"
+                    aria-label="Close"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="addBloodBankForm">
+
+
+                <div class="modal-form-grid">
+
+
+                    <!-- Blood Bank ID -->
+
+                    <div class="form-group">
+
+                        <label for="bloodBankId">
+                            Blood Bank ID
+                        </label>
+
+                        <input
+                            type="number"
+                            id="bloodBankId"
+                            placeholder="Enter blood bank ID"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label for="bloodBankName">
+                            Blood Bank Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bloodBankName"
+                            placeholder="Enter blood bank name"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="form-group">
+
+                        <label for="bloodBankLocationInput">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bloodBankLocationInput"
+                            placeholder="Enter location"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Contact -->
+
+                    <div class="form-group">
+
+                        <label for="bloodBankContact">
+                            Contact
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="bloodBankContact"
+                            placeholder="Enter contact number"
+                            maxlength="15"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>
+                        Blood Bank ID must be unique in the database.
+                    </span>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelAddBloodBank"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Blood Bank
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/blood-banks.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | BloodLink</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Reports CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/reports.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div>
+                <h2>BloodLink</h2>
+                <span>Emergency Blood System</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+
+            <a
+                href="../dashboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="find-donor.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Find Donor</span>
+            </a>
+
+
+            <a
+                href="donors.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-users"></i>
+                <span>Donors</span>
+            </a>
+
+
+            <a
+                href="blood-request.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-hand-holding-droplet"></i>
+                <span>Blood Requests</span>
+            </a>
+
+
+            <a
+                href="donations.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-heart-circle-plus"></i>
+                <span>Donations</span>
+            </a>
+
+
+            <a
+                href="inventory.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Blood Inventory</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                MANAGEMENT
+            </div>
+
+
+            <a
+                href="responses.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-reply-all"></i>
+                <span>Donor Responses</span>
+            </a>
+
+
+            <a
+                href="hospitals.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-hospital"></i>
+                <span>Hospitals</span>
+            </a>
+
+
+            <a
+                href="blood-banks.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Blood Banks</span>
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item active"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>Frontend Active</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Dashboard / Reports
+                    </span>
+
+                    <h1>Reports</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <button
+                    class="notification-btn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>Administrator</strong>
+
+                        <span>System Admin</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE INTRO -->
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="page-label">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                        SYSTEM REPORTS
+
+                    </span>
+
+
+                    <h2>
+                        Reports & Analytics
+                    </h2>
+
+
+                    <p>
+                        View summarized information about donors,
+                        requests, donations and blood inventory.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="generateReportButton"
+                >
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    Generate Report
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPORT FILTERS
+                 ================================================= -->
+
+            <div class="filter-card">
+
+
+                <div class="filter-header">
+
+                    <div>
+
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Report Filters
+                        </h3>
+
+                        <p>
+                            Select the report type and date range.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="filter-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="reportType">
+                            Report Type
+                        </label>
+
+
+                        <select id="reportType">
+
+                            <option value="overview">
+                                System Overview
+                            </option>
+
+                            <option value="donors">
+                                Donor Report
+                            </option>
+
+                            <option value="requests">
+                                Blood Request Report
+                            </option>
+
+                            <option value="donations">
+                                Donation Report
+                            </option>
+
+                            <option value="inventory">
+                                Blood Inventory Report
+                            </option>
+
+                            <option value="responses">
+                                Donor Response Report
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="fromDate">
+                            From Date
+                        </label>
+
+
+                        <input
+                            type="date"
+                            id="fromDate"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="toDate">
+                            To Date
+                        </label>
+
+
+                        <input
+                            type="date"
+                            id="toDate"
+                        >
+
+                    </div>
+
+
+                    <div class="filter-actions">
+
+                        <button
+                            class="secondary-btn"
+                            id="resetReport"
+                        >
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+                 ================================================= -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Total Donors
+                        </span>
+
+                        <strong id="totalDonors">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-hand-holding-droplet"></i>
+
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Blood Requests
+                        </span>
+
+                        <strong id="totalRequests">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-heart-circle-plus"></i>
+
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Donations
+                        </span>
+
+                        <strong id="totalDonations">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+
+                        <i class="fa-solid fa-boxes-stacked"></i>
+
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Available Units
+                        </span>
+
+                        <strong id="availableUnits">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPORT INFORMATION
+                 ================================================= -->
+
+            <div class="report-grid">
+
+
+                <!-- REQUEST SUMMARY -->
+
+                <div class="report-card">
+
+
+                    <div class="report-card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                BLOOD REQUESTS
+                            </span>
+
+                            <h3>
+                                Request Summary
+                            </h3>
+
+                        </div>
+
+
+                        <div class="card-icon red">
+
+                            <i class="fa-solid fa-hand-holding-droplet"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-list">
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Critical
+                            </span>
+
+                            <strong id="criticalRequests">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Urgent
+                            </span>
+
+                            <strong id="urgentRequests">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Normal
+                            </span>
+
+                            <strong id="normalRequests">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DONOR RESPONSE SUMMARY -->
+
+                <div class="report-card">
+
+
+                    <div class="report-card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                DONOR RESPONSES
+                            </span>
+
+                            <h3>
+                                Response Summary
+                            </h3>
+
+                        </div>
+
+
+                        <div class="card-icon blue">
+
+                            <i class="fa-solid fa-reply-all"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-list">
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Accepted
+                            </span>
+
+                            <strong id="acceptedResponses">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Pending
+                            </span>
+
+                            <strong id="pendingResponses">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Rejected
+                            </span>
+
+                            <strong id="rejectedResponses">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INVENTORY SUMMARY -->
+
+                <div class="report-card">
+
+
+                    <div class="report-card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                BLOOD INVENTORY
+                            </span>
+
+                            <h3>
+                                Inventory Summary
+                            </h3>
+
+                        </div>
+
+
+                        <div class="card-icon orange">
+
+                            <i class="fa-solid fa-boxes-stacked"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-list">
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Blood Groups
+                            </span>
+
+                            <strong id="inventoryGroups">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Blood Banks
+                            </span>
+
+                            <strong id="inventoryBanks">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>
+                                Low Stock Records
+                            </span>
+
+                            <strong id="lowStockRecords">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SYSTEM INFORMATION -->
+
+                <div class="report-card">
+
+
+                    <div class="report-card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                SYSTEM
+                            </span>
+
+                            <h3>
+                                Report Information
+                            </h3>
+
+                        </div>
+
+
+                        <div class="card-icon green">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="system-info-list">
+
+
+                        <div class="info-row">
+
+                            <span>
+                                Report Type
+                            </span>
+
+                            <strong id="selectedReportType">
+                                System Overview
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>
+                                Date Range
+                            </span>
+
+                            <strong id="selectedDateRange">
+                                All Records
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>
+                                Data Source
+                            </span>
+
+                            <strong>
+                                BloodLink Database
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPORT TABLE
+                 ================================================= -->
+
+            <div class="table-card">
+
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>
+                            Report Data
+                        </h3>
+
+                        <p id="reportSummary">
+                            Showing current demo report data
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="outline-btn"
+                        id="refreshReport"
+                    >
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+
+                    <table>
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Total
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Description
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="reportTableBody">
+
+                            <!-- JavaScript inserts report rows -->
+
+                        </tbody>
+
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         GENERATE REPORT MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="reportModal"
+    >
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+
+                <div>
+
+                    <span class="modal-label">
+                        REPORT GENERATION
+                    </span>
+
+                    <h3>
+                        Generate Report
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="closeReportModal"
+                    aria-label="Close"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <div class="generated-report-icon">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+
+                <h4>
+                    Report Ready
+                </h4>
+
+
+                <p id="generatedReportMessage">
+
+                    Your selected report has been generated
+                    using the current frontend data.
+
+                </p>
+
+
+                <div class="report-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>
+                        PDF/Excel export and live database
+                        reports will be connected after Flask
+                        backend integration.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+
+                <button
+                    class="secondary-btn"
+                    id="closeReportButton"
+                >
+                    Close
+                </button>
+
+
+                <button
+                    class="primary-btn"
+                    id="downloadReportButton"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Export
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/reports.js"></script>
+
+</body>
+
+</html>

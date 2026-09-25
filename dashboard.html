@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BloodLink | Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="sidebar-logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-droplet"></i>
+        </div>
+
+        <div class="logo-name">
+            <span>Blood</span>Link
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+        <a href="dashboard.html" class="nav-item active">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="pages/find-donor.html" class="nav-item">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <span>Find Donor</span>
+
+        </a>
+
+
+        <a href="pages/donors.html" class="nav-item">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>Donors</span>
+
+        </a>
+
+
+        <a href="pages/blood-request.html" class="nav-item">
+
+            <i class="fa-solid fa-truck-medical"></i>
+
+            <span>Blood Requests</span>
+
+        </a>
+
+
+        <p class="nav-title second-title">
+            MANAGEMENT
+        </p>
+
+
+        <a href="pages/donations.html" class="nav-item">
+
+            <i class="fa-solid fa-hand-holding-droplet"></i>
+
+            <span>Donations</span>
+
+        </a>
+
+
+        <a href="pages/inventory.html" class="nav-item">
+
+            <i class="fa-solid fa-boxes-stacked"></i>
+
+            <span>Blood Inventory</span>
+
+        </a>
+
+
+        <a href="pages/responses.html" class="nav-item">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <span>Donor Responses</span>
+
+        </a>
+
+
+        <p class="nav-title second-title">
+            RESOURCES
+        </p>
+
+
+        <a href="pages/hospitals.html" class="nav-item">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <span>Hospitals</span>
+
+        </a>
+
+
+        <a href="pages/blood-banks.html" class="nav-item">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <span>Blood Banks</span>
+
+        </a>
+
+
+        <a href="pages/reports.html" class="nav-item">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="sidebar-bottom">
+
+        <div class="help-box">
+
+            <div class="help-icon">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Need Help?</strong>
+
+                <span>Contact administrator</span>
+
+            </div>
+
+        </div>
+
+
+        <a href="index.html" class="logout-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>Back to Home</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================= -->
+
+    <header class="topbar">
+
+        <div class="mobile-menu">
+
+            <button id="menuButton">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="page-title">
+
+            <span>Overview</span>
+
+            <h1>Dashboard</h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+
+            <!-- Notification -->
+
+            <button class="notification-btn">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <!-- User -->
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="user-details">
+
+                    <strong>Administrator</strong>
+
+                    <span>System Admin</span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         DASHBOARD BODY
+    ================================================= -->
+
+    <div class="dashboard-body">
+
+
+        <!-- Welcome -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <span class="welcome-label">
+                    EMERGENCY BLOOD MANAGEMENT
+                </span>
+
+                <h2>
+                    Welcome to BloodLink
+                </h2>
+
+                <p>
+                    Manage donors, emergency blood requests,
+                    donations and blood inventory from one place.
+                </p>
+
+            </div>
+
+
+            <a href="pages/blood-request.html"
+               class="primary-action">
+
+                <i class="fa-solid fa-plus"></i>
+
+                New Blood Request
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- Donors -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="dashboard-stat-icon donor-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <span class="stat-status positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        Active
+
+                    </span>
+
+                </div>
+
+                <div class="stat-number">
+
+                    128
+
+                </div>
+
+                <div class="stat-label">
+
+                    Registered Donors
+
+                </div>
+
+                <div class="stat-description">
+
+                    Donors in the system
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Requests -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="dashboard-stat-icon request-icon">
+
+                        <i class="fa-solid fa-truck-medical"></i>
+
+                    </div>
+
+                    <span class="stat-status warning">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        Pending
+
+                    </span>
+
+                </div>
+
+                <div class="stat-number">
+
+                    24
+
+                </div>
+
+                <div class="stat-label">
+
+                    Blood Requests
+
+                </div>
+
+                <div class="stat-description">
+
+                    Active emergency requests
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Inventory -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="dashboard-stat-icon inventory-icon">
+
+                        <i class="fa-solid fa-droplet"></i>
+
+                    </div>
+
+                    <span class="stat-status positive">
+
+                        Available
+
+                    </span>
+
+                </div>
+
+                <div class="stat-number">
+
+                    87
+
+                </div>
+
+                <div class="stat-label">
+
+                    Blood Units
+
+                </div>
+
+                <div class="stat-description">
+
+                    Units currently available
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Hospitals -->
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="dashboard-stat-icon hospital-icon">
+
+                        <i class="fa-solid fa-hospital"></i>
+
+                    </div>
+
+                    <span class="stat-status positive">
+
+                        Connected
+
+                    </span>
+
+                </div>
+
+                <div class="stat-number">
+
+                    12
+
+                </div>
+
+                <div class="stat-label">
+
+                    Hospitals
+
+                </div>
+
+                <div class="stat-description">
+
+                    Registered hospitals
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENT GRID
+        ================================================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =================================================
+                 EMERGENCY REQUESTS
+            ================================================= -->
+
+            <div class="dashboard-panel requests-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            RECENT ACTIVITY
+                        </span>
+
+                        <h3>
+                            Emergency Blood Requests
+                        </h3>
+
+                    </div>
+
+
+                    <a href="pages/blood-request.html"
+                       class="view-all">
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="request-list">
+
+
+                    <!-- Request 1 -->
+
+                    <div class="request-row">
+
+                        <div class="request-blood">
+
+                            O+
+
+                        </div>
+
+                        <div class="request-info">
+
+                            <strong>
+                                Rahul Sharma
+                            </strong>
+
+                            <span>
+                                City Care Hospital
+                            </span>
+
+                        </div>
+
+                        <div class="request-units">
+
+                            <strong>
+                                2 Units
+                            </strong>
+
+                            <span>
+                                Required
+                            </span>
+
+                        </div>
+
+                        <div class="request-status critical">
+
+                            Critical
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Request 2 -->
+
+                    <div class="request-row">
+
+                        <div class="request-blood">
+
+                            B+
+
+                        </div>
+
+                        <div class="request-info">
+
+                            <strong>
+                                Priya Mehta
+                            </strong>
+
+                            <span>
+                                Ruby Hospital
+                            </span>
+
+                        </div>
+
+                        <div class="request-units">
+
+                            <strong>
+                                3 Units
+                            </strong>
+
+                            <span>
+                                Required
+                            </span>
+
+                        </div>
+
+                        <div class="request-status urgent">
+
+                            Urgent
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Request 3 -->
+
+                    <div class="request-row">
+
+                        <div class="request-blood">
+
+                            A+
+
+                        </div>
+
+                        <div class="request-info">
+
+                            <strong>
+                                Aditya Patil
+                            </strong>
+
+                            <span>
+                                Pune General Hospital
+                            </span>
+
+                        </div>
+
+                        <div class="request-units">
+
+                            <strong>
+                                1 Unit
+                            </strong>
+
+                            <span>
+                                Required
+                            </span>
+
+                        </div>
+
+                        <div class="request-status normal">
+
+                            Normal
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Request 4 -->
+
+                    <div class="request-row">
+
+                        <div class="request-blood">
+
+                            AB-
+
+                        </div>
+
+                        <div class="request-info">
+
+                            <strong>
+                                Sneha Joshi
+                            </strong>
+
+                            <span>
+                                Lifeline Hospital
+                            </span>
+
+                        </div>
+
+                        <div class="request-units">
+
+                            <strong>
+                                2 Units
+                            </strong>
+
+                            <span>
+                                Required
+                            </span>
+
+                        </div>
+
+                        <div class="request-status urgent">
+
+                            Urgent
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BLOOD INVENTORY
+            ================================================= -->
+
+            <div class="dashboard-panel inventory-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            BLOOD STOCK
+                        </span>
+
+                        <h3>
+                            Inventory
+                        </h3>
+
+                    </div>
+
+
+                    <a href="pages/inventory.html"
+                       class="view-all">
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="inventory-list">
+
+
+                    <!-- O+ -->
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-group">
+
+                            <div class="blood-mini">
+                                O+
+                            </div>
+
+                            <span>O Positive</span>
+
+                        </div>
+
+                        <div class="inventory-bar">
+
+                            <div class="bar">
+
+                                <div
+                                    class="bar-fill"
+                                    style="width: 85%;">
+                                </div>
+
+                            </div>
+
+                            <span>
+                                32 Units
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- O- -->
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-group">
+
+                            <div class="blood-mini">
+                                O-
+                            </div>
+
+                            <span>O Negative</span>
+
+                        </div>
+
+                        <div class="inventory-bar">
+
+                            <div class="bar">
+
+                                <div
+                                    class="bar-fill"
+                                    style="width: 40%;">
+                                </div>
+
+                            </div>
+
+                            <span>
+                                10 Units
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- A+ -->
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-group">
+
+                            <div class="blood-mini">
+                                A+
+                            </div>
+
+                            <span>A Positive</span>
+
+                        </div>
+
+                        <div class="inventory-bar">
+
+                            <div class="bar">
+
+                                <div
+                                    class="bar-fill"
+                                    style="width: 70%;">
+                                </div>
+
+                            </div>
+
+                            <span>
+                                22 Units
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- B+ -->
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-group">
+
+                            <div class="blood-mini">
+                                B+
+                            </div>
+
+                            <span>B Positive</span>
+
+                        </div>
+
+                        <div class="inventory-bar">
+
+                            <div class="bar">
+
+                                <div
+                                    class="bar-fill"
+                                    style="width: 55%;">
+                                </div>
+
+                            </div>
+
+                            <span>
+                                18 Units
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- AB+ -->
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-group">
+
+                            <div class="blood-mini">
+                                AB+
+                            </div>
+
+                            <span>AB Positive</span>
+
+                        </div>
+
+                        <div class="inventory-bar">
+
+                            <div class="bar">
+
+                                <div
+                                    class="bar-fill"
+                                    style="width: 35%;">
+                                </div>
+
+                            </div>
+
+                            <span>
+                                5 Units
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK ACTIONS
+        ================================================= -->
+
+        <section class="quick-actions-section">
+
+            <div class="section-small-heading">
+
+                <div>
+
+                    <span class="panel-label">
+                        QUICK ACTIONS
+                    </span>
+
+                    <h3>
+                        Manage System
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions-grid">
+
+
+                <a href="pages/find-donor.html"
+                   class="quick-action-card">
+
+                    <div class="quick-action-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Find Donor
+                        </strong>
+
+                        <span>
+                            Search available donors
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+
+
+                <a href="pages/donors.html"
+                   class="quick-action-card">
+
+                    <div class="quick-action-icon">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Manage Donors
+                        </strong>
+
+                        <span>
+                            View donor records
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+
+
+                <a href="pages/inventory.html"
+                   class="quick-action-card">
+
+                    <div class="quick-action-icon">
+
+                        <i class="fa-solid fa-boxes-stacked"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Check Inventory
+                        </strong>
+
+                        <span>
+                            View blood stock
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+
+
+                <a href="pages/reports.html"
+                   class="quick-action-card">
+
+                    <div class="quick-action-icon">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            View Reports
+                        </strong>
+
+                        <span>
+                            System analytics
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- Dashboard JavaScript -->
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

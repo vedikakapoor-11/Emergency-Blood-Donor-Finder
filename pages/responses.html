@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Donor Responses | BloodLink</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Page CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/responses.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div>
+                <h2>BloodLink</h2>
+                <span>Emergency Blood System</span>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+
+            <a
+                href="../dashboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="find-donor.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Find Donor</span>
+            </a>
+
+
+            <a
+                href="donors.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-users"></i>
+                <span>Donors</span>
+            </a>
+
+
+            <a
+                href="blood-request.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-hand-holding-droplet"></i>
+                <span>Blood Requests</span>
+            </a>
+
+
+            <a
+                href="donations.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-heart-circle-plus"></i>
+                <span>Donations</span>
+            </a>
+
+
+            <a
+                href="inventory.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Blood Inventory</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                MANAGEMENT
+            </div>
+
+
+            <a
+                href="responses.html"
+                class="nav-item active"
+            >
+                <i class="fa-solid fa-reply-all"></i>
+                <span>Donor Responses</span>
+            </a>
+
+
+            <a
+                href="hospitals.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-hospital"></i>
+                <span>Hospitals</span>
+            </a>
+
+
+            <a
+                href="blood-banks.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Blood Banks</span>
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>Frontend Active</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Dashboard / Donor Responses
+                    </span>
+
+                    <h1>Donor Responses</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <!-- Notification -->
+
+                <button
+                    class="notification-btn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- User -->
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>Administrator</strong>
+
+                        <span>System Admin</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE INTRO -->
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="page-label">
+                        <i class="fa-solid fa-reply-all"></i>
+                        RESPONSE MANAGEMENT
+                    </span>
+
+                    <h2>Donor Responses</h2>
+
+                    <p>
+                        Track donor responses to emergency blood requests.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <div class="stats-grid">
+
+
+                <!-- Total -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Total Responses</span>
+
+                        <strong id="totalResponses">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Accepted -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Accepted</span>
+
+                        <strong id="acceptedResponses">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pending -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Pending</span>
+
+                        <strong id="pendingResponses">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Rejected -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Rejected</span>
+
+                        <strong id="rejectedResponses">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTERS
+                 ================================================= -->
+
+            <div class="filter-card">
+
+
+                <div class="filter-header">
+
+                    <h3>
+                        <i class="fa-solid fa-filter"></i>
+                        Search & Filter Responses
+                    </h3>
+
+                    <p>
+                        Find donor responses using donor, request or status.
+                    </p>
+
+                </div>
+
+
+                <div class="filter-grid">
+
+
+                    <!-- Search -->
+
+                    <div class="form-group">
+
+                        <label for="responseSearch">
+                            Search
+                        </label>
+
+                        <div class="input-with-icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="responseSearch"
+                                placeholder="Search donor or request..."
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Status -->
+
+                    <div class="form-group">
+
+                        <label for="responseStatus">
+                            Response Status
+                        </label>
+
+                        <select id="responseStatus">
+
+                            <option value="">
+                                All Statuses
+                            </option>
+
+                            <option value="Accepted">
+                                Accepted
+                            </option>
+
+                            <option value="Rejected">
+                                Rejected
+                            </option>
+
+                            <option value="Pending">
+                                Pending
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Date -->
+
+                    <div class="form-group">
+
+                        <label for="responseDate">
+                            Response Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="responseDate"
+                        >
+
+                    </div>
+
+
+                    <!-- Reset -->
+
+                    <div class="filter-actions">
+
+                        <button
+                            class="secondary-btn"
+                            id="resetFilters"
+                        >
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESPONSE TABLE
+                 ================================================= -->
+
+            <div class="table-card">
+
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>
+                            Response Records
+                        </h3>
+
+                        <p id="resultSummary">
+                            Showing response records
+                        </p>
+
+                    </div>
+
+
+                    <div class="table-tools">
+
+                        <button
+                            class="outline-btn"
+                            id="refreshResponses"
+                        >
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                            Refresh
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Response ID
+                                </th>
+
+                                <th>
+                                    Donor
+                                </th>
+
+                                <th>
+                                    Request ID
+                                </th>
+
+                                <th>
+                                    Response Date
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="responseTableBody">
+
+                            <!-- JavaScript will insert rows -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RESPONSE DETAILS MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="responseModal"
+    >
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        RESPONSE DETAILS
+                    </span>
+
+                    <h3 id="modalResponseTitle">
+                        Response Details
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="closeResponseModal"
+                    aria-label="Close"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div
+                class="modal-body"
+                id="modalResponseBody"
+            >
+
+                <!-- JavaScript inserts details -->
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="secondary-btn"
+                    id="closeResponseButton"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/responses.js"></script>
+
+</body>
+
+</html>

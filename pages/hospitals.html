@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hospitals | BloodLink</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Page CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/hospitals.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div>
+                <h2>BloodLink</h2>
+                <span>Emergency Blood System</span>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+
+            <a
+                href="../dashboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="find-donor.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Find Donor</span>
+            </a>
+
+
+            <a
+                href="donors.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-users"></i>
+                <span>Donors</span>
+            </a>
+
+
+            <a
+                href="blood-request.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-hand-holding-droplet"></i>
+                <span>Blood Requests</span>
+            </a>
+
+
+            <a
+                href="donations.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-heart-circle-plus"></i>
+                <span>Donations</span>
+            </a>
+
+
+            <a
+                href="inventory.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Blood Inventory</span>
+            </a>
+
+
+            <div class="nav-section-title">
+                MANAGEMENT
+            </div>
+
+
+            <a
+                href="responses.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-reply-all"></i>
+                <span>Donor Responses</span>
+            </a>
+
+
+            <a
+                href="hospitals.html"
+                class="nav-item active"
+            >
+                <i class="fa-solid fa-hospital"></i>
+                <span>Hospitals</span>
+            </a>
+
+
+            <a
+                href="blood-banks.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Blood Banks</span>
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>Frontend Active</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Dashboard / Hospitals
+                    </span>
+
+                    <h1>Hospitals</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <!-- Notification -->
+
+                <button
+                    class="notification-btn"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- User -->
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>Administrator</strong>
+
+                        <span>System Admin</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE INTRO -->
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="page-label">
+                        <i class="fa-solid fa-hospital"></i>
+                        HOSPITAL MANAGEMENT
+                    </span>
+
+                    <h2>Hospitals</h2>
+
+                    <p>
+                        Manage hospitals connected to the emergency blood system.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="addHospitalButton"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Hospital
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <div class="stats-grid">
+
+
+                <!-- Total Hospitals -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Total Hospitals</span>
+
+                        <strong id="totalHospitals">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Locations -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Locations</span>
+
+                        <strong id="locationCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hospitals With Phone -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Contact Available</span>
+
+                        <strong id="contactCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Active Directory -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-address-book"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Directory Status</span>
+
+                        <strong id="directoryStatus">
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTERS
+                 ================================================= -->
+
+            <div class="filter-card">
+
+                <div class="filter-header">
+
+                    <h3>
+                        <i class="fa-solid fa-filter"></i>
+                        Search Hospitals
+                    </h3>
+
+                    <p>
+                        Search hospitals by name, location or phone number.
+                    </p>
+
+                </div>
+
+
+                <div class="filter-grid">
+
+
+                    <!-- Search -->
+
+                    <div class="form-group">
+
+                        <label for="hospitalSearch">
+                            Search
+                        </label>
+
+                        <div class="input-with-icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="hospitalSearch"
+                                placeholder="Search hospital..."
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="form-group">
+
+                        <label for="hospitalLocation">
+                            Location
+                        </label>
+
+                        <select id="hospitalLocation">
+
+                            <option value="">
+                                All Locations
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Reset -->
+
+                    <div class="filter-actions">
+
+                        <button
+                            class="secondary-btn"
+                            id="resetFilters"
+                        >
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HOSPITAL TABLE
+                 ================================================= -->
+
+            <div class="table-card">
+
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>
+                            Hospital Directory
+                        </h3>
+
+                        <p id="resultSummary">
+                            Showing hospital records
+                        </p>
+
+                    </div>
+
+
+                    <div class="table-tools">
+
+                        <button
+                            class="outline-btn"
+                            id="refreshHospitals"
+                        >
+
+                            <i class="fa-solid fa-arrows-rotate"></i>
+
+                            Refresh
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Hospital ID
+                                </th>
+
+                                <th>
+                                    Hospital Name
+                                </th>
+
+                                <th>
+                                    Location
+                                </th>
+
+                                <th>
+                                    Phone
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="hospitalTableBody">
+
+                            <!-- JavaScript will insert rows -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         HOSPITAL DETAILS MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="hospitalModal"
+    >
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        HOSPITAL DETAILS
+                    </span>
+
+                    <h3 id="modalHospitalTitle">
+                        Hospital Details
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="closeHospitalModal"
+                    aria-label="Close"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="modal-body"
+                id="modalHospitalBody"
+            >
+
+                <!-- JavaScript inserts details -->
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="secondary-btn"
+                    id="closeHospitalButton"
+                >
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ADD HOSPITAL MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="addHospitalModal"
+    >
+
+        <div class="modal-content add-hospital-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        HOSPITAL MANAGEMENT
+                    </span>
+
+                    <h3>
+                        Add Hospital
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="closeAddHospitalModal"
+                    aria-label="Close"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="addHospitalForm">
+
+
+                <div class="modal-form-grid">
+
+
+                    <!-- Hospital ID -->
+
+                    <div class="form-group">
+
+                        <label for="hospitalId">
+                            Hospital ID
+                        </label>
+
+                        <input
+                            type="number"
+                            id="hospitalId"
+                            placeholder="Enter hospital ID"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Hospital Name -->
+
+                    <div class="form-group">
+
+                        <label for="hospitalName">
+                            Hospital Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="hospitalName"
+                            placeholder="Enter hospital name"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="form-group">
+
+                        <label for="hospitalLocationInput">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="hospitalLocationInput"
+                            placeholder="Enter location"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="form-group">
+
+                        <label for="hospitalPhone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="hospitalPhone"
+                            placeholder="Enter phone number"
+                            maxlength="15"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>
+                        Hospital ID must be unique in the database.
+                    </span>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelAddHospital"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Hospital
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/hospitals.js"></script>
+
+</body>
+
+</html>

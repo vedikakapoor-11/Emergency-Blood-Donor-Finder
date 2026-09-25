@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donations | BloodLink</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../css/donations.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div>
+                <h2>BloodLink</h2>
+                <span>Blood Donor System</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-section-title">MAIN</p>
+
+            <a href="../dashboard.html" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-donor.html" class="nav-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Find Donor</span>
+            </a>
+
+            <a href="donors.html" class="nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Donors</span>
+            </a>
+
+
+            <p class="nav-section-title">BLOOD MANAGEMENT</p>
+
+            <a href="blood-request.html" class="nav-item">
+                <i class="fa-solid fa-hand-holding-droplet"></i>
+                <span>Blood Requests</span>
+            </a>
+
+            <a href="donations.html" class="nav-item active">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>Donations</span>
+            </a>
+
+            <a href="inventory.html" class="nav-item">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Inventory</span>
+            </a>
+
+
+            <p class="nav-section-title">SYSTEM</p>
+
+            <a href="responses.html" class="nav-item">
+                <i class="fa-solid fa-reply-all"></i>
+                <span>Donor Responses</span>
+            </a>
+
+            <a href="hospitals.html" class="nav-item">
+                <i class="fa-solid fa-hospital"></i>
+                <span>Hospitals</span>
+            </a>
+
+            <a href="blood-banks.html" class="nav-item">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Blood Banks</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System Online</strong>
+                    <small>BloodLink is running</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Blood Management
+                    </span>
+
+                    <h1>Donations</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification-btn"
+                    title="Notifications"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="user-info">
+                        <strong>Administrator</strong>
+                        <span>System Admin</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+             ===================================================== -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE INTRO -->
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="page-label">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        DONATION MANAGEMENT
+                    </span>
+
+                    <h2>Blood Donation Records</h2>
+
+                    <p>
+                        Record and manage blood donations made
+                        by registered donors at blood banks.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="addDonationButton"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Record Donation
+                </button>
+
+            </div>
+
+
+            <!-- =====================================================
+                 STATISTICS
+                 ===================================================== -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Total Donations</span>
+
+                        <strong id="totalDonations">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Total Units Donated</span>
+
+                        <strong id="totalUnits">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Unique Donors</span>
+
+                        <strong id="uniqueDonors">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Blood Banks</span>
+
+                        <strong id="bloodBanks">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 FILTER SECTION
+                 ===================================================== -->
+
+            <div class="filter-card">
+
+                <div class="filter-header">
+
+                    <div>
+
+                        <h3>
+                            <i class="fa-solid fa-filter"></i>
+                            Search Donation Records
+                        </h3>
+
+                        <p>
+                            Search donations by donor,
+                            blood bank or donation date.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="filter-grid">
+
+
+                    <!-- SEARCH -->
+
+                    <div class="form-group search-group">
+
+                        <label for="donationSearch">
+                            Search
+                        </label>
+
+                        <div class="input-with-icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="donationSearch"
+                                placeholder="Search donor or blood bank..."
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="form-group">
+
+                        <label for="donationDateFilter">
+                            Donation Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="donationDateFilter"
+                        >
+
+                    </div>
+
+
+                    <!-- RESET -->
+
+                    <div class="filter-actions">
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                            id="resetFilters"
+                        >
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 DONATION TABLE
+                 ===================================================== -->
+
+            <div class="table-card">
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>
+                            Donation History
+                        </h3>
+
+                        <p id="resultSummary">
+                            Showing donation records
+                        </p>
+
+                    </div>
+
+
+                    <div class="table-tools">
+
+                        <button
+                            class="outline-btn"
+                            id="refreshDonations"
+                        >
+                            <i class="fa-solid fa-rotate"></i>
+                            Refresh
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Donation ID
+                                </th>
+
+                                <th>
+                                    Donor
+                                </th>
+
+                                <th>
+                                    Donation Date
+                                </th>
+
+                                <th>
+                                    Units Donated
+                                </th>
+
+                                <th>
+                                    Blood Bank
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="donationTableBody">
+
+                            <!-- Donation records
+                                 generated by donations.js -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         DONATION DETAILS MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="donationModal"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        DONATION INFORMATION
+                    </span>
+
+                    <h3 id="modalDonationTitle">
+                        Donation Details
+                    </h3>
+
+                </div>
+
+                <button
+                    class="modal-close"
+                    id="closeDonationModal"
+                    aria-label="Close"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div
+                class="modal-body"
+                id="modalDonationBody"
+            >
+                <!-- Details generated by JavaScript -->
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="secondary-btn"
+                    id="closeDonationButton"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RECORD DONATION MODAL
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="addDonationModal"
+    >
+
+        <div class="modal-content add-donation-modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        DONATION REGISTRATION
+                    </span>
+
+                    <h3>
+                        Record Blood Donation
+                    </h3>
+
+                </div>
+
+                <button
+                    class="modal-close"
+                    id="closeAddDonationModal"
+                    aria-label="Close"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="addDonationForm">
+
+                <div class="modal-form-grid">
+
+
+                    <!-- DONOR -->
+
+                    <div class="form-group">
+
+                        <label for="donationDonor">
+                            Donor
+                        </label>
+
+                        <select
+                            id="donationDonor"
+                            required
+                        >
+
+                            <option value="">
+                                Select Donor
+                            </option>
+
+                            <option value="1">
+                                Aryan Choudhari
+                            </option>
+
+                            <option value="2">
+                                Riti Kumar
+                            </option>
+
+                            <option value="3">
+                                Vedika Kapoor
+                            </option>
+
+                            <option value="4">
+                                Shivani Salunkhe
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="form-group">
+
+                        <label for="donationDate">
+                            Donation Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="donationDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- UNITS -->
+
+                    <div class="form-group">
+
+                        <label for="unitsDonated">
+                            Units Donated
+                        </label>
+
+                        <input
+                            type="number"
+                            id="unitsDonated"
+                            min="1"
+                            max="10"
+                            placeholder="Enter units"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- BLOOD BANK -->
+
+                    <div class="form-group">
+
+                        <label for="donationBloodBank">
+                            Blood Bank
+                        </label>
+
+                        <select
+                            id="donationBloodBank"
+                            required
+                        >
+
+                            <option value="">
+                                Select Blood Bank
+                            </option>
+
+                            <option value="1">
+                                City Blood Bank
+                            </option>
+
+                            <option value="2">
+                                Pune Blood Centre
+                            </option>
+
+                            <option value="3">
+                                Red Cross Blood Bank
+                            </option>
+
+                            <option value="4">
+                                Lifeline Blood Bank
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>
+                        Donation records are linked to a donor
+                        and a blood bank in the database.
+                    </span>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelAddDonation"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Record Donation
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/donations.js"></script>
+
+</body>
+
+</html>

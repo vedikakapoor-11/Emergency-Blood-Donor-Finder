@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Dashboard | BloodLink</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- User Dashboard CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/user.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         USER DASHBOARD
+         BloodLink - Emergency Blood Donor Finder System
+         ===================================================== -->
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Brand -->
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <h2>BloodLink</h2>
+
+                <span>
+                    Blood Donor System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+
+            <!-- Main -->
+
+            <div class="nav-section-title">
+                MAIN
+            </div>
+
+
+            <a
+                href="user-dashboard.html"
+                class="nav-item active"
+            >
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="#find-donor"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <span>
+                    Find Donor
+                </span>
+
+            </a>
+
+
+            <a
+                href="#request-blood"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-hand-holding-droplet"></i>
+
+                <span>
+                    Request Blood
+                </span>
+
+            </a>
+
+
+            <!-- My Activity -->
+
+            <div class="nav-section-title">
+                MY ACTIVITY
+            </div>
+
+
+            <a
+                href="#my-requests"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <span>
+                    My Requests
+                </span>
+
+            </a>
+
+
+            <a
+                href="#my-donations"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <span>
+                    My Donations
+                </span>
+
+            </a>
+
+
+            <!-- Account -->
+
+            <div class="nav-section-title">
+                ACCOUNT
+            </div>
+
+
+            <a
+                href="#profile"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>
+                    My Profile
+                </span>
+
+            </a>
+
+
+            <a
+                href="#logout"
+                class="nav-item logout-link"
+                id="logoutButton"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- System Status -->
+
+        <div class="system-status">
+
+            <div class="status-dot"></div>
+
+            <div>
+
+                <strong>
+                    System Online
+                </strong>
+
+                <span>
+                    BloodLink is running
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+             ================================================= -->
+
+        <header class="topbar">
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="topbar-title">
+
+                <span>
+                    USER PORTAL
+                </span>
+
+                <h1>
+                    User Dashboard
+                </h1>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <!-- Notification -->
+
+                <button
+                    class="notification-btn"
+                    id="notificationButton"
+                    type="button"
+                    title="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span
+                        class="notification-badge"
+                        id="notificationBadge"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- User Profile -->
+
+                <button
+                    class="user-profile"
+                    id="userProfileButton"
+                    type="button"
+                >
+
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong id="userName">
+                            User
+                        </strong>
+
+                        <span>
+                            BloodLink User
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="page-content">
+
+
+            <!-- =================================================
+                 WELCOME SECTION
+                 ================================================= -->
+
+            <section class="welcome-section">
+
+                <div class="welcome-text">
+
+                    <span class="section-label">
+
+                        <i class="fa-solid fa-hand-wave"></i>
+
+                        WELCOME BACK
+
+                    </span>
+
+                    <h2 id="welcomeMessage">
+                        Welcome to BloodLink!
+                    </h2>
+
+                    <p>
+                        Find blood donors, request blood,
+                        manage your requests and help save lives.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+                 ================================================= -->
+
+            <section class="section-block">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                            QUICK ACTIONS
+
+                        </span>
+
+                        <h2>
+                            What would you like to do?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="action-grid">
+
+
+                    <!-- Find Donor -->
+
+                    <button
+                        class="action-card donor-action"
+                        id="findDonorButton"
+                        type="button"
+                    >
+
+                        <div class="action-icon">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                Find a Donor
+                            </h3>
+
+                            <p>
+                                Search for available blood donors
+                                based on blood group and location.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </button>
+
+
+
+                    <!-- Request Blood -->
+
+                    <button
+                        class="action-card request-action"
+                        id="requestBloodButton"
+                        type="button"
+                    >
+
+                        <div class="action-icon">
+
+                            <i class="fa-solid fa-hand-holding-droplet"></i>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                Request Blood
+                            </h3>
+
+                            <p>
+                                Create a blood request for yourself
+                                or someone who needs help.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </button>
+
+
+
+                    <!-- Become Donor -->
+
+                    <button
+                        class="action-card donor-register-action"
+                        id="becomeDonorButton"
+                        type="button"
+                    >
+
+                        <div class="action-icon">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                Become a Donor
+                            </h3>
+
+                            <p>
+                                Register yourself as a blood donor
+                                and help someone in need.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 USER SUMMARY CARDS
+                 ================================================= -->
+
+            <section class="section-block">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+
+                            <i class="fa-solid fa-chart-simple"></i>
+
+                            MY ACTIVITY
+
+                        </span>
+
+                        <h2>
+                            Your BloodLink Activity
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+
+                    <!-- Requests -->
+
+                    <div class="summary-card">
+
+                        <div class="summary-icon request-icon">
+
+                            <i class="fa-solid fa-file-medical"></i>
+
+                        </div>
+
+                        <div class="summary-info">
+
+                            <span>
+                                My Requests
+                            </span>
+
+                            <strong id="myRequestsCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Blood requests
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Donations -->
+
+                    <div class="summary-card">
+
+                        <div class="summary-icon donation-icon">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                        </div>
+
+                        <div class="summary-info">
+
+                            <span>
+                                My Donations
+                            </span>
+
+                            <strong id="myDonationsCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Donations made
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Responses -->
+
+                    <div class="summary-card">
+
+                        <div class="summary-icon response-icon">
+
+                            <i class="fa-solid fa-reply"></i>
+
+                        </div>
+
+                        <div class="summary-info">
+
+                            <span>
+                                Responses
+                            </span>
+
+                            <strong id="myResponsesCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Donor responses
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Donor Status -->
+
+                    <div class="summary-card">
+
+                        <div class="summary-icon status-icon">
+
+                            <i class="fa-solid fa-user-check"></i>
+
+                        </div>
+
+                        <div class="summary-info">
+
+                            <span>
+                                Donor Status
+                            </span>
+
+                            <strong id="donorStatus">
+                                Not Registered
+                            </strong>
+
+                            <small>
+                                Your donor profile
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BLOOD EMERGENCY SECTION
+                 ================================================= -->
+
+            <section class="emergency-card">
+
+
+                <div class="emergency-icon">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                </div>
+
+
+                <div class="emergency-content">
+
+                    <span>
+                        NEED BLOOD URGENTLY?
+                    </span>
+
+                    <h2>
+                        Find a suitable blood donor
+                    </h2>
+
+                    <p>
+                        Search available donors based on
+                        blood group, location and availability.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="emergency-button"
+                    id="emergencyFindButton"
+                    type="button"
+                >
+
+                    Find Donor
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECENT REQUESTS
+                 ================================================= -->
+
+            <section class="section-block">
+
+
+                <div class="section-heading with-action">
+
+                    <div>
+
+                        <span class="section-label">
+
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            RECENT ACTIVITY
+
+                        </span>
+
+                        <h2>
+                            Recent Requests
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="outline-button"
+                        id="viewAllRequestsButton"
+                        type="button"
+                    >
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="requests-container"
+                    id="recentRequests"
+                >
+
+                    <!-- Empty state -->
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+
+                            <i class="fa-solid fa-file-medical"></i>
+
+                        </div>
+
+                        <h3>
+                            No requests yet
+                        </h3>
+
+                        <p>
+                            Your recent blood requests will appear here.
+                        </p>
+
+                        <button
+                            class="primary-button"
+                            id="createFirstRequestButton"
+                            type="button"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Request Blood
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DONOR INFORMATION
+                 ================================================= -->
+
+            <section class="information-grid">
+
+
+                <!-- How it works -->
+
+                <div class="info-card">
+
+                    <div class="info-card-header">
+
+                        <div class="info-icon">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                HOW IT WORKS
+                            </span>
+
+                            <h3>
+                                Need Blood?
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="steps">
+
+
+                        <div class="step">
+
+                            <div class="step-number">
+                                1
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Search
+                                </strong>
+
+                                <p>
+                                    Find donors matching your blood group.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <div class="step-number">
+                                2
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Request
+                                </strong>
+
+                                <p>
+                                    Submit a blood request.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <div class="step-number">
+                                3
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Connect
+                                </strong>
+
+                                <p>
+                                    Connect with suitable donors.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Become Donor -->
+
+                <div class="info-card donor-info-card">
+
+                    <div class="info-card-header">
+
+                        <div class="info-icon">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                SAVE A LIFE
+                            </span>
+
+                            <h3>
+                                Become a Donor
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="info-description">
+
+                        One blood donation can help people
+                        in need. Register as a donor and
+                        make a difference.
+
+                    </p>
+
+
+                    <button
+                        class="primary-button full-width"
+                        id="registerDonorButton"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        Register as Donor
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+                 ================================================= -->
+
+            <footer class="user-footer">
+
+                <div>
+
+                    <strong>
+                        BloodLink
+                    </strong>
+
+                    <span>
+                        Emergency Blood Donor Finder System
+                    </span>
+
+                </div>
+
+
+                <span>
+                    © 2026 BloodLink
+                </span>
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PROFILE DROPDOWN
+         ===================================================== -->
+
+    <div
+        class="profile-menu"
+        id="profileMenu"
+    >
+
+        <div class="profile-menu-header">
+
+            <div class="profile-avatar large">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div>
+
+                <strong id="profileMenuName">
+                    User
+                </strong>
+
+                <span id="profileMenuEmail">
+                    user@bloodlink.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-menu-divider"></div>
+
+
+        <button
+            type="button"
+            id="profileMenuProfile"
+        >
+
+            <i class="fa-solid fa-user"></i>
+
+            My Profile
+
+        </button>
+
+
+        <button
+            type="button"
+            id="profileMenuLogout"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         NOTIFICATION PANEL
+         ===================================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-header">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button
+                type="button"
+                id="closeNotifications"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="notification-content"
+            id="notificationContent"
+        >
+
+            <div class="notification-empty">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <p>
+                    No new notifications
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         USER DASHBOARD JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/user-dashboard.js"></script>
+
+</body>
+
+</html>

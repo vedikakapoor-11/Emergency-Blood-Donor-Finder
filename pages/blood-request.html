@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BloodLink | Blood Requests</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Blood Request CSS -->
+    <link rel="stylesheet" href="../css/blood-request.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- Logo -->
+
+    <div class="sidebar-logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-droplet"></i>
+
+        </div>
+
+        <div class="logo-name">
+
+            <span>Blood</span>Link
+
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN MENU
+        </p>
+
+
+        <a href="../dashboard.html" class="nav-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="find-donor.html" class="nav-item">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <span>Find Donor</span>
+
+        </a>
+
+
+        <a href="donors.html" class="nav-item">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>Donors</span>
+
+        </a>
+
+
+        <a href="blood-request.html" class="nav-item active">
+
+            <i class="fa-solid fa-truck-medical"></i>
+
+            <span>Blood Requests</span>
+
+        </a>
+
+
+        <p class="nav-title second-title">
+            MANAGEMENT
+        </p>
+
+
+        <a href="donations.html" class="nav-item">
+
+            <i class="fa-solid fa-hand-holding-droplet"></i>
+
+            <span>Donations</span>
+
+        </a>
+
+
+        <a href="inventory.html" class="nav-item">
+
+            <i class="fa-solid fa-boxes-stacked"></i>
+
+            <span>Blood Inventory</span>
+
+        </a>
+
+
+        <a href="responses.html" class="nav-item">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <span>Donor Responses</span>
+
+        </a>
+
+
+        <p class="nav-title second-title">
+            RESOURCES
+        </p>
+
+
+        <a href="hospitals.html" class="nav-item">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <span>Hospitals</span>
+
+        </a>
+
+
+        <a href="blood-banks.html" class="nav-item">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <span>Blood Banks</span>
+
+        </a>
+
+
+        <a href="reports.html" class="nav-item">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+            <div class="help-icon">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Need Help?</strong>
+
+                <span>Contact administrator</span>
+
+            </div>
+
+        </div>
+
+
+        <a href="../index.html" class="logout-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>Back to Home</span>
+
+        </a>
+
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <div class="mobile-menu">
+
+            <button id="menuButton">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="page-title">
+
+            <span>Emergency Management</span>
+
+            <h1>Blood Requests</h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+
+            <button class="notification-btn">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="user-details">
+
+                    <strong>Administrator</strong>
+
+                    <span>System Admin</span>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE BODY
+    ================================================= -->
+
+    <div class="page-body">
+
+
+        <!-- =================================================
+             PAGE INTRO
+        ================================================= -->
+
+        <section class="page-intro">
+
+
+            <div>
+
+                <span class="page-label">
+                    EMERGENCY BLOOD MANAGEMENT
+                </span>
+
+                <h2>
+                    Blood Requests
+                </h2>
+
+                <p>
+                    Create and manage emergency blood requests
+                    received from registered hospitals.
+                </p>
+
+            </div>
+
+
+            <div class="intro-icon">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             NEW REQUEST CARD
+        ================================================= -->
+
+        <section class="request-form-card">
+
+
+            <div class="form-card-header">
+
+
+                <div class="form-title-icon">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Create Blood Request
+                    </h3>
+
+                    <p>
+                        Enter the patient's blood requirement.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <form id="bloodRequestForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- Patient Name -->
+
+                    <div class="form-group">
+
+
+                        <label for="patientName">
+
+                            Patient Name
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user"></i>
+
+
+                            <input
+                                type="text"
+                                id="patientName"
+                                name="patientName"
+                                placeholder="Enter patient name"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Blood Group -->
+
+                    <div class="form-group">
+
+
+                        <label for="bloodGroup">
+
+                            Blood Group
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+
+                            <select
+                                id="bloodGroup"
+                                name="bloodGroup"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Blood Group
+                                </option>
+
+                                <option value="A+">
+                                    A+
+                                </option>
+
+                                <option value="A-">
+                                    A-
+                                </option>
+
+                                <option value="B+">
+                                    B+
+                                </option>
+
+                                <option value="B-">
+                                    B-
+                                </option>
+
+                                <option value="AB+">
+                                    AB+
+                                </option>
+
+                                <option value="AB-">
+                                    AB-
+                                </option>
+
+                                <option value="O+">
+                                    O+
+                                </option>
+
+                                <option value="O-">
+                                    O-
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Units -->
+
+                    <div class="form-group">
+
+
+                        <label for="unitsRequired">
+
+                            Units Required
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-flask"></i>
+
+
+                            <input
+                                type="number"
+                                id="unitsRequired"
+                                name="unitsRequired"
+                                min="1"
+                                placeholder="Number of units"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Request Date -->
+
+                    <div class="form-group">
+
+
+                        <label for="requestDate">
+
+                            Request Date
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+
+                            <input
+                                type="date"
+                                id="requestDate"
+                                name="requestDate"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Emergency Level -->
+
+                    <div class="form-group">
+
+
+                        <label for="emergencyLevel">
+
+                            Emergency Level
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+
+                            <select
+                                id="emergencyLevel"
+                                name="emergencyLevel"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Emergency Level
+                                </option>
+
+                                <option value="Critical">
+                                    Critical
+                                </option>
+
+                                <option value="Urgent">
+                                    Urgent
+                                </option>
+
+                                <option value="Normal">
+                                    Normal
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Hospital -->
+
+                    <div class="form-group">
+
+
+                        <label for="hospital">
+
+                            Hospital
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-hospital"></i>
+
+
+                            <select
+                                id="hospital"
+                                name="hospital"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Hospital
+                                </option>
+
+                                <!--
+                                    These are temporary demo hospitals.
+
+                                    Later Flask will load these from
+                                    the HOSPITAL table.
+                                -->
+
+                                <option value="1">
+                                    City Care Hospital
+                                </option>
+
+                                <option value="2">
+                                    Ruby Hospital
+                                </option>
+
+                                <option value="3">
+                                    Pune General Hospital
+                                </option>
+
+                                <option value="4">
+                                    Lifeline Hospital
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FORM ACTIONS
+                ================================================= -->
+
+                <div class="form-actions">
+
+
+                    <button
+                        type="reset"
+                        class="secondary-button"
+                        id="clearRequestButton"
+                    >
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Clear
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Submit Blood Request
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             REQUEST SUMMARY
+        ================================================= -->
+
+        <section class="summary-grid">
+
+
+            <!-- Critical -->
+
+            <div class="summary-card critical-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+                <div>
+
+                    <strong id="criticalCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Critical Requests
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Urgent -->
+
+            <div class="summary-card urgent-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <strong id="urgentCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Urgent Requests
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Normal -->
+
+            <div class="summary-card normal-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <strong id="normalCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Normal Requests
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Total -->
+
+            <div class="summary-card total-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-list"></i>
+
+                </div>
+
+                <div>
+
+                    <strong id="totalCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Total Requests
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             REQUEST LIST
+        ================================================= -->
+
+        <section class="requests-section">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <span class="page-label">
+                        REQUEST HISTORY
+                    </span>
+
+                    <h3>
+                        Recent Blood Requests
+                    </h3>
+
+                    <p>
+                        Requests currently recorded in the system.
+                    </p>
+
+                </div>
+
+
+                <div class="request-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="requestSearch"
+                        placeholder="Search patient..."
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Table -->
+
+            <div class="table-container">
+
+
+                <table class="requests-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Request ID
+                            </th>
+
+                            <th>
+                                Patient
+                            </th>
+
+                            <th>
+                                Blood Group
+                            </th>
+
+                            <th>
+                                Units
+                            </th>
+
+                            <th>
+                                Emergency
+                            </th>
+
+                            <th>
+                                Request Date
+                            </th>
+
+                            <th>
+                                Hospital
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="requestTableBody">
+
+
+                        <!-- Demo Request 1 -->
+
+                        <tr>
+
+                            <td>
+                                #REQ001
+                            </td>
+
+                            <td>
+
+                                <div class="patient-cell">
+
+                                    <div class="patient-avatar">
+                                        RS
+                                    </div>
+
+                                    <strong>
+                                        Rahul Sharma
+                                    </strong>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="blood-badge">
+                                    O+
+                                </span>
+
+                            </td>
+
+                            <td>
+                                2 Units
+                            </td>
+
+                            <td>
+
+                                <span class="emergency-badge critical">
+                                    Critical
+                                </span>
+
+                            </td>
+
+                            <td>
+                                21 Sep 2026
+                            </td>
+
+                            <td>
+                                City Care Hospital
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    title="View Request"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Demo Request 2 -->
+
+                        <tr>
+
+                            <td>
+                                #REQ002
+                            </td>
+
+                            <td>
+
+                                <div class="patient-cell">
+
+                                    <div class="patient-avatar">
+                                        PM
+                                    </div>
+
+                                    <strong>
+                                        Priya Mehta
+                                    </strong>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="blood-badge">
+                                    B+
+                                </span>
+
+                            </td>
+
+                            <td>
+                                3 Units
+                            </td>
+
+                            <td>
+
+                                <span class="emergency-badge urgent">
+                                    Urgent
+                                </span>
+
+                            </td>
+
+                            <td>
+                                21 Sep 2026
+                            </td>
+
+                            <td>
+                                Ruby Hospital
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    title="View Request"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Demo Request 3 -->
+
+                        <tr>
+
+                            <td>
+                                #REQ003
+                            </td>
+
+                            <td>
+
+                                <div class="patient-cell">
+
+                                    <div class="patient-avatar">
+                                        AP
+                                    </div>
+
+                                    <strong>
+                                        Aditya Patil
+                                    </strong>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="blood-badge">
+                                    A+
+                                </span>
+
+                            </td>
+
+                            <td>
+                                1 Unit
+                            </td>
+
+                            <td>
+
+                                <span class="emergency-badge normal">
+                                    Normal
+                                </span>
+
+                            </td>
+
+                            <td>
+                                20 Sep 2026
+                            </td>
+
+                            <td>
+                                Pune General Hospital
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    title="View Request"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Demo Request 4 -->
+
+                        <tr>
+
+                            <td>
+                                #REQ004
+                            </td>
+
+                            <td>
+
+                                <div class="patient-cell">
+
+                                    <div class="patient-avatar">
+                                        SJ
+                                    </div>
+
+                                    <strong>
+                                        Sneha Joshi
+                                    </strong>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="blood-badge">
+                                    AB-
+                                </span>
+
+                            </td>
+
+                            <td>
+                                2 Units
+                            </td>
+
+                            <td>
+
+                                <span class="emergency-badge urgent">
+                                    Urgent
+                                </span>
+
+                            </td>
+
+                            <td>
+                                19 Sep 2026
+                            </td>
+
+                            <td>
+                                Lifeline Hospital
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    title="View Request"
+                                >
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMATION BOX
+        ================================================= -->
+
+        <section class="info-box">
+
+
+            <div class="info-icon">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Emergency Request Information
+                </h4>
+
+                <p>
+                    Critical and urgent requests should be
+                    handled according to the emergency
+                    requirements of the hospital. Request
+                    records will be stored in the
+                    BLOOD_REQUEST table when the Flask
+                    backend is connected.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     REQUEST DETAILS MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="requestModal"
+>
+
+
+    <div class="request-modal">
+
+
+        <button
+            class="modal-close"
+            id="modalClose"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-truck-medical"></i>
+
+        </div>
+
+
+        <span class="modal-label">
+            BLOOD REQUEST
+        </span>
+
+
+        <h2 id="modalPatientName">
+            Patient Name
+        </h2>
+
+
+        <div class="modal-details">
+
+
+            <div>
+
+                <span>
+                    Request ID
+                </span>
+
+                <strong id="modalRequestId">
+                    #REQ001
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Blood Group
+                </span>
+
+                <strong id="modalBloodGroup">
+                    O+
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Units Required
+                </span>
+
+                <strong id="modalUnits">
+                    2 Units
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Emergency Level
+                </span>
+
+                <strong id="modalEmergency">
+                    Critical
+                </strong>
+
+            </div>
+
+
+            <div class="full-width">
+
+                <span>
+                    Hospital
+                </span>
+
+                <strong id="modalHospital">
+                    City Care Hospital
+                </strong>
+
+            </div>
+
+
+            <div class="full-width">
+
+                <span>
+                    Request Date
+                </span>
+
+                <strong id="modalDate">
+                    21 Sep 2026
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            class="modal-close-action"
+            id="modalCloseAction"
+        >
+
+            Close
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- Blood Request JavaScript -->
+
+<script src="../js/blood-request.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>BloodLink - Login</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/user.css"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8f9fa,
+                    #ffe5e5
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px 15px;
+        }
+
+
+        /* =========================================
+           MAIN CONTAINER
+        ========================================= */
+
+        .login-container {
+
+            width: 100%;
+
+            max-width: 480px;
+        }
+
+
+        /* =========================================
+           LOGIN CARD
+        ========================================= */
+
+        .login-card {
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 10px 35px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================================
+           BRAND
+        ========================================= */
+
+        .brand {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+
+        .brand-icon {
+
+            width: 60px;
+
+            height: 60px;
+
+            margin:
+                0 auto 12px;
+
+            border-radius: 50%;
+
+            background: #dc3545;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 30px;
+        }
+
+
+        .brand h1 {
+
+            margin: 0;
+
+            color: #dc3545;
+
+            font-size: 28px;
+        }
+
+
+        .brand p {
+
+            margin:
+                7px 0 0;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FORM TITLE
+        ========================================= */
+
+        .form-title {
+
+            margin-bottom: 22px;
+        }
+
+
+        .form-title h2 {
+
+            margin: 0;
+
+            color: #333;
+
+            font-size: 23px;
+        }
+
+
+        .form-title p {
+
+            margin:
+                6px 0 0;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FORM GROUP
+        ========================================= */
+
+        .form-group {
+
+            margin-bottom: 18px;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #333;
+        }
+
+
+        .form-group input {
+
+            width: 100%;
+
+            padding:
+                12px 14px;
+
+            border:
+                1px solid #d5d5d5;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition: 0.2s;
+        }
+
+
+        .form-group input:focus {
+
+            border-color: #dc3545;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(220, 53, 69, 0.1);
+        }
+
+
+        /* =========================================
+           LOGIN BUTTON
+        ========================================= */
+
+        .login-btn {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #dc3545;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+            margin-top: 5px;
+        }
+
+
+        .login-btn:hover {
+
+            background: #c82333;
+        }
+
+
+        .login-btn:disabled {
+
+            background: #999;
+
+            cursor: not-allowed;
+        }
+
+
+        /* =========================================
+           MESSAGE
+        ========================================= */
+
+        .message {
+
+            display: none;
+
+            padding:
+                11px 13px;
+
+            border-radius: 8px;
+
+            margin-bottom: 17px;
+
+            font-size: 14px;
+        }
+
+
+        .message.error {
+
+            display: block;
+
+            background: #fde8e8;
+
+            color: #b42318;
+
+            border:
+                1px solid #f5c2c7;
+        }
+
+
+        .message.success {
+
+            display: block;
+
+            background: #e8f7ee;
+
+            color: #146c43;
+
+            border:
+                1px solid #badbcc;
+        }
+
+
+        /* =========================================
+           REGISTER LINK
+        ========================================= */
+
+        .register-link {
+
+            text-align: center;
+
+            margin-top: 22px;
+
+            font-size: 14px;
+
+            color: #666;
+        }
+
+
+        .register-link a {
+
+            color: #dc3545;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+
+        .register-link a:hover {
+
+            text-decoration: underline;
+        }
+
+
+        /* =========================================
+           BACK LINK
+        ========================================= */
+
+        .back-link {
+
+            text-align: center;
+
+            margin-top: 15px;
+        }
+
+
+        .back-link a {
+
+            color: #666;
+
+            text-decoration: none;
+
+            font-size: 13px;
+        }
+
+
+        .back-link a:hover {
+
+            color: #dc3545;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 500px) {
+
+            .login-card {
+
+                padding:
+                    25px 20px;
+            }
+
+
+            .brand h1 {
+
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="login-container">
+
+
+        <div class="login-card">
+
+
+            <!-- =====================================
+                 BRAND
+            ====================================== -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🩸
+                </div>
+
+                <h1>
+                    BloodLink
+                </h1>
+
+                <p>
+                    Emergency Blood Donor Finder System
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 FORM TITLE
+            ====================================== -->
+
+            <div class="form-title">
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+                <p>
+                    Login to access your BloodLink account.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 MESSAGE
+            ====================================== -->
+
+            <div
+                id="message"
+                class="message">
+            </div>
+
+
+            <!-- =====================================
+                 LOGIN FORM
+            ====================================== -->
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                        maxlength="100"
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                        maxlength="100"
+                    >
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                    id="loginBtn"
+                >
+                    Login
+                </button>
+
+
+            </form>
+
+
+            <!-- =====================================
+                 REGISTER LINK
+            ====================================== -->
+
+            <div class="register-link">
+
+                Don't have an account?
+
+                <a href="signup.html">
+                    Create Account
+                </a>
+
+            </div>
+
+
+            <!-- =====================================
+                 BACK LINK
+            ====================================== -->
+
+            <div class="back-link">
+
+                <a href="user-dashboard.html">
+                    ← Back to User Dashboard
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         LOGIN JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+
+        const message =
+            document.getElementById("message");
+
+
+        const loginBtn =
+            document.getElementById("loginBtn");
+
+
+        loginForm.addEventListener(
+            "submit",
+            async function(event) {
+
+                event.preventDefault();
+
+
+                /* =================================
+                   GET FORM VALUES
+                ================================= */
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+
+                const password =
+                    document
+                        .getElementById("password")
+                        .value;
+
+
+                /* =================================
+                   CLEAR MESSAGE
+                ================================= */
+
+                message.className =
+                    "message";
+
+                message.textContent =
+                    "";
+
+
+                /* =================================
+                   BASIC VALIDATION
+                ================================= */
+
+                if (!email) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Email is required.";
+
+                    return;
+                }
+
+
+                if (!password) {
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Password is required.";
+
+                    return;
+                }
+
+
+                /* =================================
+                   DISABLE BUTTON
+                ================================= */
+
+                loginBtn.disabled =
+                    true;
+
+                loginBtn.textContent =
+                    "Logging in...";
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "http://127.0.0.1:5000/api/login",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body:
+                                    JSON.stringify({
+
+                                        Email: email,
+
+                                        Password: password
+
+                                    })
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    /* =================================
+                       SUCCESSFUL LOGIN
+                    ================================= */
+
+                    if (response.ok) {
+
+                        message.className =
+                            "message success";
+
+                        message.textContent =
+                            "Login successful!";
+
+
+                        /* =================================
+                           SAVE LOGGED-IN USER INFORMATION
+                        ================================= */
+
+                        localStorage.setItem(
+                            "bloodLinkUser",
+                            JSON.stringify({
+
+                                User_ID:
+                                    data.User_ID,
+
+                                Name:
+                                    data.Name,
+
+                                Email:
+                                    data.Email,
+
+                                Phone:
+                                    data.Phone,
+
+                                Role:
+                                    data.Role
+
+                            })
+                        );
+
+
+                        console.log(
+                            "Logged-in user saved:",
+                            {
+                                User_ID:
+                                    data.User_ID,
+
+                                Name:
+                                    data.Name,
+
+                                Email:
+                                    data.Email,
+
+                                Phone:
+                                    data.Phone,
+
+                                Role:
+                                    data.Role
+                            }
+                        );
+
+
+                        /* =================================
+                           ROLE-BASED REDIRECT
+                        ================================= */
+
+                        setTimeout(
+                            function() {
+
+                                if (
+                                    data.Role ===
+                                    "ADMIN"
+                                ) {
+
+                                    window.location.href =
+                                        "../../dashboard.html";
+
+                                }
+
+                                else {
+
+                                    window.location.href =
+                                        "user-dashboard.html";
+
+                                }
+
+                            },
+                            1000
+                        );
+
+                    }
+
+
+                    /* =================================
+                       LOGIN FAILED
+                    ================================= */
+
+                    else {
+
+                        message.className =
+                            "message error";
+
+                        message.textContent =
+                            data.message ||
+                            "Invalid email or password.";
+
+                        loginBtn.disabled =
+                            false;
+
+                        loginBtn.textContent =
+                            "Login";
+                    }
+
+                }
+
+
+                /* =================================
+                   SERVER CONNECTION ERROR
+                ================================= */
+
+                catch (error) {
+
+                    console.error(
+                        "Login error:",
+                        error
+                    );
+
+                    message.className =
+                        "message error";
+
+                    message.textContent =
+                        "Unable to connect to the server. Make sure Flask is running.";
+
+                    loginBtn.disabled =
+                        false;
+
+                    loginBtn.textContent =
+                        "Login";
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
